@@ -1,0 +1,19 @@
+ {
+  "name": "vaibahvi-portfilo",
+  "version": "1.0.0",
+  "description": "here is my newest portfilo",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "vaibhavi"
+  },
+  "author": "vaibhavi",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "pug": "^3.0.3"
+  }
+}
