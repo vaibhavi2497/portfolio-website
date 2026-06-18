@@ -2,7 +2,7 @@ const express = require("express");
 const path = require('path');
 // const fs = require('fs');
 const app = express();
-const port = 80;
+const port = process.env.PORT || 3000;
 
 // Express specific stuff
 // app.use(('/static',express.static('static')));
@@ -21,7 +21,6 @@ app.get('/', (req , res) => {
 });
 
 // Start the server
-app.listen(port,()=>{
-    console.log(`This application started succesfully on port ${port}`);
+app.listen(port, () => {
+    console.log(`This application started successfully on port ${port}`);
 });
-
