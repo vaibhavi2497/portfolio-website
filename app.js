@@ -1,26 +1,25 @@
 const express = require("express");
-const path = require('path');
-// const fs = require('fs');
+const path = require("path");
+
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Express specific stuff
-// app.use(('/static',express.static('static')));
-app.use('/static',express.static('static'));
-app.use(express.urlencoded());
+// Middleware
+app.use("/static", express.static("static"));
+app.use(express.urlencoded({ extended: true }));
 
-// PUG specific stuff
-app.set('view engine','pug'); //set bthe pug template
-app.set('views',path.join(__dirname,'views')); //set the view directory
+// Pug
+app.set("view engine", "pug");
+app.set("views", path.join(__dirname, "views"));
 
-// Endpoints
-app.get('/', (req , res) => {
-    const param = {title:'This is a title'}
-    // res.status(200).render('index.pug', param);
-    res.status(200).render('index.pug',param);
+// Routes
+app.get("/", (req, res) => {
+    res.render("index", {
+        title: "Portfolio"
+    });
 });
 
-// Start the server
+// Server
 app.listen(port, () => {
-    console.log(`This application started successfully on port ${port}`);
+    console.log(`Server running at http://localhost:${port}`);
 });

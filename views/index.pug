@@ -1,176 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vaibhavi | Full Stack Developer</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css">
-    
-    <script src="https://kit.fontawesome.com/10080bf3c7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./static/style.css" />
 
-    <!-- <link rel="stylesheet" href="../static/index.js"> -->
+    <script    src="https://kit.fontawesome.com/10080bf3c7.js"     crossorigin="anonymous"    ></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+  </head>
 
-    <title>Portfolio Website</title>
-</head>
+  <body>
+    <!--================ HEADER =================-->
 
-<body>
     <div id="header">
-        <div class="container">
-            <nav>
-                <img src="" class="logo" alt="">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfilo</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu( )"></i>
-            </nav>
-            <div class="header-text">
-                <p>Full-Stack WebDevloper</p>
-                <h1>Hi, I'm <span>Vaibhavi</span><br> From India</h1>
+      <div class="overlay"></div>
+
+      <div class="container">
+        <nav>
+         <h2 class="logo">&lt;VN/&gt;</h2>
+
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#services">Services</a></li>
+
+            <li><a href="#portfolio">Portfolio</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+            <i class="fas fa-times" onclick="closemenu()"></i>
+          </ul>
+
+          <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+
+        <div class="header-content">
+          <div class="header-text">
+            <p class="intro">👋 Hello, I'm</p>
+
+            <h1>Vaibhavi</h1>
+
+            <h2>
+              <span id="typing"></span>
+            </h2>
+
+            <p class="description"> Passionate Full Stack Web Developer who builds beautiful,responsive and scalable web applications. I enjoy turning ideas into interactive digital experiences. </p>
+
+            <div class="hero-buttons">
+            
+              <a href="#portfolio" class="btn btn-primary">
+                <i class="fas fa-code"></i>  View Projects </a>
+            
+              <a href="#contact" class="btn btn-outline">
+                <i class="fas fa-paper-plane"></i>  Hire Me </a>
+            
             </div>
+
+          
+          </div>
+
+          <div class="hero-image">
+            <div class="glow-circle"></div>
+
+            <img src="./static/profile.png" alt="Vaibhavi" />
+          </div>
         </div>
+      </div>
     </div>
-    <!-- ------------------------------About------------------------------------- -->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="../static/v2.jpg" alt="">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus facere laborum quaerat voluptates reprehenderit aspernatur quae porro quis sequi! Est vel, esse aspernatur consequatur minus accusantium alias vitae quidem ipsa amet itaque corporis id. Eum dolores maxime perspiciatis, vitae in ipsum ea voluptatibus porro molestiae error ipsa magni nulla blanditiis eveniet cumque explicabo possimus mollitia asperiores esse iusto fuga ex quibusdam. Itaque deserunt perspiciatis cupiditate voluptates in ad maiores officiis.</p>
-                    <div class="tab-title">
-                        <p class="tab-links active-links " onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links"onclick="opentab('experiane')">Experiance</p>
-                        <p class="tab-links"onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab " id="skills">
-                        <ul>
-                            <li><span>UI/UX</span><br>Desinging web/App Interfaces</li>
-                            <li><span>Web Development</span><br>Web App Development</li>
-                            <li><span>App Devlopment</span><br>Building Android/iOS apps</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experiane">
-                        <ul>
-                            <li><span>2023 - current</span><br>UI/UX Desing Traning at ET Instutute</li>
-                            <li><span>2011 - 2023</span><br>Team lead at StarApp LLC</li>
-                            <li><span>2019 - 2023</span><br>UI/UX Design Executiveat Coin Digital td.</li>
-                            <li><span>2018 - 2019</span><br>Intership at ekart eCommerce.</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2019</span><br>Masters at K.W.C. Collage</li>
-                            <li><span>2016</span><br>Graduate at M.M. Collage</li>
-                            <li><span>2014</span><br>H.S.C at Shivaji Univercity</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Image -->
+
+      <div class="about-col-1">
+
+      <div class="image-card">
+      
+        <img src="./static/v2.jpg" alt="Vaibhavi" id="profileImage">
+      
+        <div class="image-border"></div>
+      
+      </div>
+      
+      <!-- Image Popup -->
+      
+      <div id="imageModal" class="image-modal">
+      
+        <span class="close-image">&times;</span>
+      
+        <img class="modal-content" id="fullImage">
+      
+      </div>
+
     </div>
 
-    <!-- ----------------------------Services------------------------------- -->
+    <!-- Content -->
+
+    <div class="about-col-2">
+
+        <h1 class="sub-title"> About <span>Me</span> </h1>
+
+        <p class="about-text"> I'm <strong>Vaibhavi</strong>, a passionate Full Stack Web Developer specializing in creating modern, responsive, and scalable web applications. I enjoy transforming ideas into real-world products using HTML, CSS, JavaScript, React, Python, Flask, and MySQL.  My focus is on writing clean code, building beautiful interfaces, and delivering seamless user experiences. </p>
+
+        <!-- Stats -->
+
+        <div class="about-stats">
+
+            <div class="stat-card">
+                <h2>10+</h2>
+                <p>Projects</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>8+</h2>
+                <p>Technologies</p>
+            </div>
+
+            <div class="stat-card">
+                <h2>100%</h2>
+                <p>Dedication</p>
+            </div>
+
+        </div>
+
+        <!-- Tabs -->
+
+        <div class="tab-title">
+
+            <p class="tab-links active-links" onclick="opentab(event,'skills')"> Skills </p>
+
+            <p class="tab-links" onclick="opentab(event,'experience')"> Experience </p>
+
+            <p class="tab-links" onclick="opentab(event,'education')"> Education </p>
+
+        </div>
+
+        <!-- Skills -->
+
+        <div class="tab-contents active-tab" id="skills">
+
+            <div class="skill">
+
+                <p>HTML & CSS</p>
+
+                <div class="progress">
+                    <span style="width:95%"></span>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <p>JavaScript</p>
+
+                <div class="progress">
+                    <span style="width:85%"></span>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <p>Python & Flask</p>
+
+                <div class="progress">
+                    <span style="width:88%"></span>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <p>MySQL</p>
+
+                <div class="progress">
+                    <span style="width:82%"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Experience -->
+
+        <div class="tab-contents" id="experience">
+
+            <ul>
+
+                <li> <span>2025 - Present</span><br> Full Stack Developer  </li>
+
+                <li> <span>2024</span><br> Python & Flask Projects  </li>i> <span>2023</span><br>      Started Web Development Journey
+                </li>
+
+            </ul>
+
+        </div>
+
+        <!-- Education -->
+
+        <div class="tab-contents" id="education">
+
+            <ul>
+
+                <li><span>B.Sc. Computer Science</span><br> 2018 Graduate </li>
+
+                <li> <span>.NET Development</span><br> Industry Training  </li>
+
+                <li> <span>Full Stack Development</span><br> Self-learning & Projects  </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+    <!-- ================= SERVICES ================= -->
+
     <div id="services">
-        <div class="container">
-            <h1 class="sub-title">My Services</h1>
-            <div class="services-list">
-                <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Desiner</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, minima? Modi, minus, aliquam ipsum, quos inventore facere officia corporis pariatur error sequi praesentium aperiam.</p>
-                </div>
-                <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>UI/UX Design</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, minima? Modi, minus, aliquam ipsum, quos inventore facere officia corporis pariatur error sequi praesentium aperiam.</p>
-                </div>
-                <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>App Developer</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo, minima? Modi, minus, aliquam ipsum, quos inventore facere officia corporis pariatur error sequi praesentium aperiam.</p>
-                </div>
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
 
-            </div>
+        <div class="services-list">
+          <div>
+            <i class="fas fa-code"></i>
 
+            <h2>Web Development</h2>
+
+            <p>Responsive websites using HTML, CSS, JavaScript, Flask and Bootstrap. </p>
+          </div>
+
+          <div>
+            <i class="fas fa-palette"></i>
+
+            <h2>UI / UX Design</h2>
+
+            <p> Modern and attractive user interfaces with excellent user experience. </p>
+          </div>
+
+          <div>
+            <i class="fas fa-mobile-alt"></i>
+
+            <h2>Responsive Design</h2>
+
+            <p>Mobile-friendly websites that work perfectly on every device.</p>
+          </div>
         </div>
+      </div>
     </div>
 
+<!-- ================= PORTFOLIO ================= -->
 
-    <!-- -----------------------------------------portfolio=--------------------------------------- -->
-     <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="../static/bg1.jpg" alt="">
-                    <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deleniti quae consequatur ipsum sapiente culpa alias sequi distinctio dolorem. Molestias voluptatibus doloribus itaque harum, ut ratione totam iure nemo alias.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
+<!-- ================= PROJECTS ================= -->
+
+<section id="portfolio">
+
+    <div class="container">
+
+        <h1 class="sub-title">Featured Projects</h1>
+
+        <div class="project-grid">
+
+            <!-- Project 1 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    <i class="fas fa-users"></i>
                 </div>
-                <div class="work">
-                    <img src="../static/v1.jpg" alt="">
-                    <div class="layer">
-                        <h3>Music App</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deleniti quae consequatur ipsum sapiente culpa alias sequi distinctio dolorem. Molestias voluptatibus doloribus itaque harum, ut ratione totam iure nemo alias.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
+
+                <h2>Collab Note</h2>
+
+                <p>A collaborative note-taking web application where users can create, edit, organize, and share notes in real time with a clean and responsive interface.</p>
+
+                <div class="tech-stack">
+                    <span>React</span>
+                    <span>Redux ToolKit</span>
+                    <span>Firebase</span>
+                    <span>JavaScript</span>
                 </div>
-                <div class="work">
-                    <img src="../static/v2.jpg" alt="">
-                    <div class="layer">
-                        <h3>Online Shopping App</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci deleniti quae consequatur ipsum sapiente culpa alias sequi distinctio dolorem. Molestias voluptatibus doloribus itaque harum, ut ratione totam iure nemo alias.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/yourusername/collab-note" target="_blank">
+                        <i class="fab fa-github"></i> GitHub </a>
+
+                    <a href="https://your-demo-link.com" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Live Demo </a>
                 </div>
-                
+
             </div>
-            <a href="#" class="btn"> See More</a>
-        </div>
-     </div>
 
+            <!-- Project 2 -->
 
-     <!-- ------------------------------contact--------------------------- -->
+            <div class="project-card">
 
-     <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p> <i class="fas fa-paper-plane"></i>vaibhavinalawade2018@gmail.com</p>
-                    <p><i class="fas fa-phone-square-alt"></i>0123456789</p>
-                    <div class="social-icons">
-                        <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
-                        <a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
-                        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
-                        <a href="https://linkedin.com"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                    <a href="../static/v1.jpg" class="btn btn2" download>Download CV</a>
+                <div class="project-icon">
+                    <i class="fas fa-laptop-code"></i>
                 </div>
-                <div class="contact-right">
-                    <form action="">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="message"  rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
+
+                <h2>Personal Portfolio</h2>
+
+                <p>A modern responsive portfolio website showcasing my skills, Projects, services, and contact information with smooth animations and interactive UI.</p>
+
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>Node</span>
+                    <span>JavaScript</span>
+                    <span>Bootstrap</span>
                 </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/yourusername/portfolio" target="_blank">
+                        <i class="fab fa-github"></i> GitHub </a>
+
+                    <a href="https://your-portfolio-link.com" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Live Demo </a>
+                </div>
+
             </div>
+
+            <!-- Project 3 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    <i class="fas fa-list-check"></i>
+                </div>
+
+                <h2>To-Do List App</h2>
+
+                <p> A task management application that allows users to add, update, delete, and track daily tasks with a simple and user-friendly interface.</p>
+
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>MYSQL</span>
+                    <span>JavaScript</span>
+                    <span>PHP</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="https://github.com/yourusername/todo-list" target="_blank">
+                        <i class="fab fa-github"></i> GitHub </a>
+
+                    <a href="https://your-demo-link.com" target="_blank">
+                        <i class="fas fa-arrow-up-right-from-square"></i> Live Demo </a>
+                </div>
+
+            </div>
+
         </div>
-        <div class="copyright">
-            <p>Copyright @ Vaibhavi, Made with <i class="fas fa-heart"></i> me</p>
+
+    </div>
+
+</section>
+    <!-- ================= CONTACT ================= -->
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+
+            <p>
+              <i class="fas fa-paper-plane"></i> vaibhavinalawade2018@gmail.com
+            </p>
+
+            <p><i class="fas fa-phone"></i> +91 9876543210</p>
+            <div class="social-icons">
+          
+            <a href="https://github.com/vaibhavi2497" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          
+            <a href="www.linkedin.com/in/vaibhavi-nalawade-189445205/" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          
+            <a href="https://www.instagram.com/vaibhavi_v.chavan/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+             <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+
+              <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+          
+          </div>
+           
+
+            <a href="./static/Vaibhavi-Resume.pdf" download="Vaibhavi_Resume.pdf" class="btn btn2"> Download Resume</a>
+          </div>
+
+          <div class="contact-right">
+            <form id="contactForm" action="https://formsubmit.co/vaibhavinalawade2018@gmail.com" method="POST">
+            
+              <input type="hidden" name="_captcha" value="false">
+            
+              <input type="text" name="name" placeholder="Your Name" required>
+            
+              <input type="email" name="email" placeholder="Your Email" required>
+            
+              <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+            
+              <button type="submit" class="btn btn2">Send Message</button>
+            
+            </form>
+            
+            <p id="msg"></p>
+          </div>
         </div>
-     </div>
-    <script src="../static/index.js"></script>
+      </div>
+
+      <!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+
+    <div class="footer-content">
+
+      <div class="footer-logo">
+        <h2>Vaibhavi.</h2>
+        <p>Frontend Developer | Full Stack Learner</p>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="mailto:YOUR_EMAIL@gmail.com">
+          <i class="fas fa-envelope"></i>
+        </a>
+
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="copyright">
+      <p> © 2026 <span>Vaibhavi Nalawade</span>. All Rights Reserved.</p>
+
+      <p>Designed & Developed with<i class="fas fa-heart heart"></i> using HTML, CSS & JavaScript.      </p>
+    </div>
+
+    <button id="topBtn">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+  </div>
+</footer>
+    <div class="cursor-glow"></div>
+
+    </script> <script src="./static/index.js"></script>
 </body>
-
 </html>
